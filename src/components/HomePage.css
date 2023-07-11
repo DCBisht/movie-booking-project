@@ -1,0 +1,231 @@
+body{
+    background-color: #01010eef;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  
+  }
+  
+  .imageContainer {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .title {
+    padding-top: 15px;
+    margin: auto;
+    text-align: center;
+    color: aliceblue;
+    font-size: 40px;
+  }
+  
+  .movieContainer {
+    margin: auto;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .viewAllButton {
+    display: flex;
+    padding: 5px;
+    margin: auto;
+  }
+  
+  .viewAllButton button {
+    margin-left: 500px;
+    color: #06060a;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-item img {
+    width: 30%; /* Adjust the value as needed */
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-caption p {
+    font-size: 18px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 8 8"%3E%3Cpath d="M4 0l-.59.59L0 4l3.41 3.41L4 8l-4-4 4-4z"/%3E%3C/svg%3E');
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 8 8"%3E%3Cpath d="M4 0l-4 4 4 4 .59-.59L1.17 4.5l3.41-3.41L4 0z"/%3E%3C/svg%3E');
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+/* Home.css */
+
+.carousel-caption .book-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .carousel-caption .book-button:hover {
+    background-color: #000000;
+  }
+  .carousel-caption h1{
+    padding: 10px 20px;
+    font-size: 32px;
+    background-color: #000000;
+    color: #fff;
+  }
+  .carousel-caption p{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #f50057;
+    color: #fff;
+  }
+  .MoviesSp {
+    background-color: #06061c;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .MoviesSp h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .MoviesSp h3 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .MoviesSp section {
+    margin-bottom: 40px;
+  }
+  
+  .MoviesSp h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* .card img {
+    width: 10%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  } */
+  
+  .card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .card btn{
+    width: 20%;
+  }
+  .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .card p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .dark-mode {
+    background-color: #111;
+    color: #ccc;
+  }
+  
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode p {
+    color: #ccc;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .MoviesSp {
+      padding: 10px;
+    }
+  
+    .movie-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    .card h2 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  
+    .card p {
+      font-size: 12px;
+    }
+  }

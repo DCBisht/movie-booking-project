@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Dark background */
+body {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Dark theme for Box component */
+  .Box {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  /* Dark theme for Typography component */
+  .Typography {
+    color: #fff;
+  }
+  
+  /* Dark theme for List component */
+  .List {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  /* Dark theme for ListItem component */
+  .ListItem {
+    background-color: #666;
+    color: #fff;
+  }
+  
+  /* Dark theme for ListItemText component */
+  .ListItemText {
+    color: #fff;
+  }
+  
+  /* Interactive styles for ListItem component */
+  .ListItem:hover {
+    background-color: #777;
+    cursor: pointer;
+  }
+  

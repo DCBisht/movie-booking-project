@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* Header container */
+.Header {
+    background-color: #2b2d42;
+  }
+a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* Logo icon */
+  .LogoIcon {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  /* Search input */
+  .SearchInput {
+    color: #fff;
+  }
+  
+  /* Tabs container */
+  .TabsContainer {
+    display: flex;
+  }
+  
+  /* Individual tab */
+  .Tab {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-right: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Active tab */
+  .Tab.active {
+    background-color: #ffcc29;
+    border-radius: 5px;
+    color: #000;
+  }
+  
+  /* Hover effect on tabs */
+  .Tab:hover {
+    background-color: #444;
+    cursor: pointer;
+  }
+  
+  /* Logout button */
+  .LogoutButton {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-left: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect on logout button */
+  .LogoutButton:hover {
+    background-color: #ffcc29;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+  }
+  

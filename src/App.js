@@ -1,15 +1,15 @@
-// import React "react";
 import { useEffect } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./components/Home";
-import Movies from "./components/Movies";
-import Navbar from "./components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
-// import Contacts from "./components/Contacts";
-// import Bookings from "./components/Bookings";
-import MyBooking from "./components/Bookings";
-import Login from "./components/Login";
+import { Route, Routes } from "react-router-dom";
+import Admin from "./components/Auth/Admin";
+import Auth from "./components/Auth/Auth";
+import Booking from "./components/Bookings/Booking";
+import Header from "./components/Header";
+import HomePage from "./components/HomePage";
+import AddMovie from "./components/Movies/AddMovie";
+import Movies from "./components/Movies/Movies";
+import AdminProfile from "./profile/AdminProfile";
+import UserProfile from "./profile/UserProfile";
 import { adminActions, userActions } from "./store";
 
 function App() {
@@ -27,24 +27,34 @@ function App() {
   }, [dispatch]);
   return (
     <div>
-    
-    <Navbar/> 
-
-    
-      <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="Home" element={ <HomePage/> } />
-      <Route path="Movies" element={ <Movies/> } />
-      <Route path="Bookings" element={<MyBooking/> } />
-      <Route path="Login" element={ <Login/> } />
-      
-      </Routes>
-
-
-    {/* <HomePage/>  */}
-
-
-   
+      <Header />
+      <section>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<Movies />} />
+          {!isUserLoggedIn && !isAdminLoggedIn && (
+            <>
+              {" "}
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/auth" element={<Auth />} />
+            </>
+          )}
+          {isUserLoggedIn && !isAdminLoggedIn && (
+            <>
+              {" "}
+              <Route path="/user" element={<UserProfile />} />
+              <Route path="/booking/:id" element={<Booking />} />
+            </>
+          )}
+          {isAdminLoggedIn && !isUserLoggedIn && (
+            <>
+              {" "}
+              <Route path="/add" element={<AddMovie />} />
+              <Route path="/user-admin" element={<AdminProfile />} />{" "}
+            </>
+          )}
+        </Routes>
+      </section>
     </div>
   );
 }

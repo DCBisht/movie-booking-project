@@ -11,14 +11,15 @@ export const addMovie = async (req, res, next) => {
   let adminId;
 
   // verify token
-  jwt.verify(extractedToken, process.env.SECRET_KEY, (err, decrypted) => {
-    if (err) {
-      return res.status(400).json({ message: `${err.message}` });
-    } else {
-      adminId = decrypted.id;
-      return;
-    }
-  });
+  // jwt.verify(extractedToken, process.env.SECRET_KEY, (err, decrypted) => {
+  //   if (err) {
+    
+  //     return res.status(400).json({ message: `${err.message}`+"This is dc error" });
+  //   } else {
+  //     adminId = decrypted.id;
+  //     return;
+  //   }
+  // });
 
   //create new movie
   const { title, description, releaseDate, posterUrl, featured, actors } =
@@ -41,19 +42,19 @@ export const addMovie = async (req, res, next) => {
       releaseDate: new Date(`${releaseDate}`),
       featured,
       actors,
-      admin: adminId,
+      
       posterUrl,
       title,
     });
     const session = await mongoose.startSession();
-    const adminUser = await Admin.findById(adminId);
+    // const adminUser = await Admin.findById(adminId);
     session.startTransaction();
     await movie.save({ session });
-    adminUser.addedMovies.push(movie);
-    await adminUser.save({ session });
+    // adminUser.addedMovies.push(movie);
+    // await adminUser.save({ session });
     await session.commitTransaction();
   } catch (err) {
-    return console.log(err);
+    return console.log(err+"This is dc error");
   }
 
   if (!movie) {

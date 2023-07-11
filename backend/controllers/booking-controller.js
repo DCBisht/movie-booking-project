@@ -12,7 +12,7 @@ export const newBooking = async (req, res, next) => {
     existingMovie = await Movie.findById(movie);
     existingUser = await User.findById(user);
   } catch (err) {
-    return console.log(err);
+    return console.log(err+"dcbisht");
   }
   if (!existingMovie) {
     return res.status(404).json({ message: "Movie Not Found With Given ID" });
@@ -31,8 +31,8 @@ export const newBooking = async (req, res, next) => {
     });
     const session = await mongoose.startSession();
     session.startTransaction();
-    existingUser.bookings.push(booking);
-    existingMovie.bookings.push(booking);
+    // existingUser.bookings.push(booking);
+    // existingMovie.bookings.push(booking);
     await existingUser.save({ session });
     await existingMovie.save({ session });
     await booking.save({ session });
@@ -70,8 +70,8 @@ export const deleteBooking = async (req, res, next) => {
     console.log(booking);
     const session = await mongoose.startSession();
     session.startTransaction();
-    await booking.user.bookings.pull(booking);
-    await booking.movie.bookings.pull(booking);
+    // await booking.user.bookings.pull(booking);
+    // await booking.movie.bookings.pull(booking);
     await booking.movie.save({ session });
     await booking.user.save({ session });
     session.commitTransaction();
