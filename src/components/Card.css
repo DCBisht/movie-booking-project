@@ -1,0 +1,57 @@
+/* Card.css */
+
+.card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the maximum height as per your preference */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .card h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-content button {
+    display: block;
+    width: 20px;
+    height: 10px;
+    padding: 10px;
+    background-color: #ff5f6d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .card-content button:hover {
+    background-color: #ff3c4a;
+  }  

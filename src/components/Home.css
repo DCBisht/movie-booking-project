@@ -1,0 +1,76 @@
+/* Home.css */
+
+.carousel-item img {
+    width: 30%; /* Adjust the value as needed */
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-caption p {
+    font-size: 18px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 8 8"%3E%3Cpath d="M4 0l-.59.59L0 4l3.41 3.41L4 8l-4-4 4-4z"/%3E%3C/svg%3E');
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 8 8"%3E%3Cpath d="M4 0l-4 4 4 4 .59-.59L1.17 4.5l3.41-3.41L4 0z"/%3E%3C/svg%3E');
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+/* Home.css */
+
+.carousel-caption .book-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .carousel-caption .book-button:hover {
+    background-color: #000000;
+  }
+  .carousel-caption h1{
+    padding: 10px 20px;
+    font-size: 32px;
+    background-color: #000000;
+    color: #fff;
+  }
+  .carousel-caption p{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #f50057;
+    color: #fff;
+  }
