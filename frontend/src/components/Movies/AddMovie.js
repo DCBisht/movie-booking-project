@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { addMovie } from "../../api-helpers/api-helpers";
+import './Movie.css';
 const labelProps = {
   mt: 1,
   mb: 1,
@@ -36,7 +37,7 @@ const AddMovie = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div>
+    <div className="addm">
       <form onSubmit={handleSubmit}>
         <Box
           // color={"whitesmoke"}
@@ -48,7 +49,7 @@ const AddMovie = () => {
           flexDirection="column"
           boxShadow={"10px 10px 20px #ccc"}
         >
-          <Typography textAlign={"center"} variant="h5" fontFamily={"verdana"}  color={"whitesmoke"}>
+          <Typography className="typo" textAlign={"center"} variant="h5" fontFamily={"verdana"}  >
             Add New Movie
           </Typography>
           <FormLabel sx={labelProps} >Title</FormLabel>

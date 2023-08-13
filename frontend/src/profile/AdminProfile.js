@@ -3,6 +3,8 @@ import React, { Fragment, useEffect, useState } from "react";
 import { getAdminById } from "../api-helpers/api-helpers";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { List, ListItem, ListItemText, Typography } from "@mui/material";
+import './sty.css';
+
 const AdminProfile = () => {
   const [admin, setAdmin] = useState();
   useEffect(() => {
@@ -11,6 +13,7 @@ const AdminProfile = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
+    <div className="whi">
     <Box width={"100%"} display="flex">
       <Fragment>
         {" "}
@@ -19,7 +22,7 @@ const AdminProfile = () => {
             flexDirection={"column"}
             justifyContent="center"
             alignItems={"center"}
-            width={"30%"}
+            width={"22%"}
             padding={3}
           >
             <AccountCircleIcon
@@ -77,6 +80,7 @@ const AdminProfile = () => {
         )}
       </Fragment>
     </Box>
+    </div>
   );
 };
 

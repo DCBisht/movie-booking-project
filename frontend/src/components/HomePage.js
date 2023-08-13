@@ -45,7 +45,7 @@ const HomePage = () => {
             <div className="carousel-caption d-none d-md-block">
               <h1>Welcome</h1>
               <p>Find and book your favourite movies</p>
-              <a href="/movies"><button className="book-button">Book Now</button></a>
+            <Link to="/movies"> <a href="/movies"><button className="book-button">Book Now</button></a></Link> 
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="2000">
@@ -96,13 +96,13 @@ const HomePage = () => {
       </div>
       <div className="movie-list"> {/* Use the "movieContainer" class */}
         {movies &&
-          movies.slice(0, 6).map((movie, index) => (
+          movies.slice(0, 8).map((movie, index) => (
             <MovieItem
-              id={movie.id}
+            key={index}
               title={movie.title}
               posterUrl={movie.posterUrl}
               releaseDate={movie.releaseDate}
-              key={index}
+              id={movie._id}
             />
           ))}
       </div>

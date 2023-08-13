@@ -108,7 +108,7 @@ export const getUserDetails = async () => {
 export const addMovie = async (data) => {
   const res = await axios
     .post(
-      "/movie",
+      "/movie/add",
       {
         title: data.title,
         description: data.description,
@@ -116,13 +116,8 @@ export const addMovie = async (data) => {
         posterUrl: data.posterUrl,
         fetaured: data.fetaured,
         actors: data.actors,
-        admin: localStorage.getItem("adminId"),
       },
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      }
+      
     )
     .catch((err) => console.log(err));
 

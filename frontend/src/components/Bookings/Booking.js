@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieDetails, newBooking } from "../../api-helpers/api-helpers";
-
+import './Booking.css';
 const Booking = () => {
   const [movie, setMovie] = useState();
   const [inputs, setInputs] = useState({ seatNumber: "", date: "" });
@@ -29,16 +29,18 @@ const Booking = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div>
+    <div className="book">
       {movie && (
-        <Fragment>
+        <Fragment
+        color={"white"}
+        >
           <Typography
             padding={3}
-            fontFamily="fantasy"
-            variant="h4"
+            fontFamily="Serif"
+            variant="h3"
             textAlign={"center"}
           >
-            Book TIckets Of Movie: {movie.title}
+            Book Tickets Of Movie: {movie.title}
           </Typography>
           <Box display={"flex"} justifyContent={"center"}>
             <Box

@@ -16,10 +16,10 @@ const Movies = () => {
     <h3>Find and book your favourite movies</h3>
     
         <div className="movie-list">
-          {movies && movies.map((movie) => (
+          {movies && movies.map((movie,index) => (
               <MovieItem
-                key={movie.key}  
-                id={movie.id}
+                key={index}  
+                id={movie._id}
                 title={movie.title}
                 posterUrl={movie.posterUrl}
                 releaseDate={movie.releaseDate}

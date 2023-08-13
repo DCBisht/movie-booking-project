@@ -3,12 +3,12 @@ import mongoose from "mongoose";
 import Admin from "../models/Admin";
 import Movie from "../models/Movie";
 export const addMovie = async (req, res, next) => {
-  const extractedToken = req.headers.authorization.split(" ")[1];
-  if (!extractedToken && extractedToken.trim() === "") {
-    return res.status(404).json({ message: "Token Not Found" });
-  }
+  // const extractedToken = req.headers.authorization.split(" ")[1];
+  // if (!extractedToken && extractedToken.trim() === "") {
+  //   return res.status(404).json({ message: "Token Not Found" });
+  // }
 
-  let adminId;
+  // let adminId;
 
   // verify token
   // jwt.verify(extractedToken, process.env.SECRET_KEY, (err, decrypted) => {
@@ -42,7 +42,6 @@ export const addMovie = async (req, res, next) => {
       releaseDate: new Date(`${releaseDate}`),
       featured,
       actors,
-      
       posterUrl,
       title,
     });
@@ -85,7 +84,7 @@ export const getMovieById = async (req, res, next) => {
   try {
     movie = await Movie.findById(id);
   } catch (err) {
-    return console.log(err);
+    return console.log(err+"Hello Divya");
   }
 
   if (!movie) {

@@ -131,7 +131,7 @@ export const getUserById = async (req, res, next) => {
   const id = req.params.id;
   let user;
   try {
-    user = await User.findById({id:id});
+    user = await User.findById(id);
   } catch (err) {
     return console.log(err);
   }

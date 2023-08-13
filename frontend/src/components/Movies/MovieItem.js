@@ -53,19 +53,38 @@
 // };
 
 // export default MovieItem;
+import {
+  Button
+} from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 // import React from 'react';
 import './MovieItem.css';
 
-const MovieItem = ({ key, id, posterUrl, releaseDate,title }) => {
+const MovieItem = ({  id, posterUrl, releaseDate,title }) => {
   return (
     <div className="card">
       <img src={posterUrl} alt={title} />
       <h2>{title}</h2>
+    
       {/* <p>{description}</p> */}
       <p> {new Date(releaseDate).toDateString()}</p>
-      <Link to={`/booking/${id}`}><button className="book-now-button">Book Now</button></Link>
+      <Button
+          variant="contained"
+          fullWidth
+          LinkComponent={Link}
+          to={`/booking/${id}`}
+          sx={{
+            margin: "auto",
+            bgcolor: "#2b2d42",
+            ":hover": {
+              bgcolor: "#121217",
+            },
+          }}
+          size="small"
+        >
+          Book
+        </Button>
     </div>
   );
 };

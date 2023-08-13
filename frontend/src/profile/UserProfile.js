@@ -5,6 +5,7 @@ import {
   getUserBooking,
   getUserDetails,
 } from "../api-helpers/api-helpers";
+import './sty.css';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   IconButton,
@@ -32,6 +33,7 @@ const UserProfile = () => {
       .catch((err) => console.log(err));
   };
   return (
+    <div className="whi">
     <Box width={"100%"} display="flex">
       <Fragment>
         {" "}
@@ -40,7 +42,7 @@ const UserProfile = () => {
             flexDirection={"column"}
             justifyContent="center"
             alignItems={"center"}
-            width={"30%"}
+            width={"23%"}
             padding={3}
           >
             <AccountCircleIcon
@@ -122,6 +124,7 @@ const UserProfile = () => {
         )}
       </Fragment>
     </Box>
+    </div>
   );
 };
 
